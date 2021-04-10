@@ -1,0 +1,53 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html { 
+  background: url(https://wallpapercave.com/wp/gtTpbgU.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.main{
+  display:flex;
+  justify-content: center;
+  position: relative;
+  top: 290px;
+}
+button{
+  position: relative;
+  left: 50px;
+}
+.wood-text {
+  $random-text: 'suitable villa';
+  background: url('https://i.imgur.com/OUyfQnt.jpg');
+  background-size: cover;
+  position: relative;
+  font-size: $extra-large * 1.5;
+  text-transform: uppercase;
+  font-family: 'Rancho', cursive;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  &:after {
+    $stroke-width: $extra-large * 0.05;
+    content: $random-text;
+    position: absolute;
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: rgba(black, 0.6);
+    left: 2px;
+    top: 2px
+  }
+}

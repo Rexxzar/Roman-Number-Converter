@@ -1,0 +1,314 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.main{
+  display:flex;
+  justify-content: center;
+  position: relative;
+  top: 300px;
+  left: 150px;
+}
+.title{
+  position: relative;
+  left: 200px;
+}
+.middle{
+  position: relative;
+  left: 10px;
+}
+button{
+  position: relative;
+  left: 50px;
+}
+$extra-large: 30px;
+$large: 84px;
+.wood-text {
+  $random-text: '';
+  background: url('https://i.imgur.com/OUyfQnt.jpg');
+  background-size: cover;
+  position: relative;
+  font-size: $extra-large * 1.5;
+  text-transform: uppercase;
+  font-family: 'Rancho', cursive;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: 30x;
+  filter: brightness(60%);
+  
+  &:after {
+    $stroke-width: $extra-large * 0.05;
+    content: $random-text;
+    position: absolute;
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: rgba(rgb(66, 64, 64), 0.6);
+    left: 3px;
+    top: 2px
+    
+  }
+}
+.header-position{
+position: relative;
+bottom: 300px;
+
+}
+:root {
+
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.answer{
+  position: relative;
+  top: 180px;
+  right: 190px;
+}
+html {
+  background: url(https://wallpapercave.com/wp/gtTpbgU.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-sizing: border-box;
+
+
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+
+.main2{
+  display: flex;
+  justify-content: center;
+ position: relative;
+ right: 160px;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+$openSans: 'Open Sans', Helvetica, Arial, sans-serif;
+
+
+.buttons {
+  margin-top: 50px;
+  text-align: center;
+  border-radius:30px;
+}
+
+$cyan: #996118;
+$dark: #FFFFFF;
+$borderW: 2px;
+
+.blob-btn {
+  $numOfBlobs: 4;
+  z-index: 1;
+  position: relative;
+  padding: 20px 46px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $cyan;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius:30px;
+ 
+  
+  &:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: $borderW solid $cyan;
+    border-radius:30px;
+  }
+  
+  &:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: $borderW*1.5;
+    top: $borderW*1.5;
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.3s 0.2s;
+    border-radius:30px;
+  }
+  
+  &:hover {
+    color: $dark;
+    border-radius:30px;
+    
+    &:after {
+      transition: all 0.3s;
+      left: 0;
+      top: 0;
+      border-radius:30px;
+    }
+  }
+  
+  &__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:30px;
+    background:#ffffff;
+  }
+  
+  &__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url('#goo');
+  }
+  
+  &__blob {
+    position: absolute;
+    top: $borderW;
+    width: 100% / $numOfBlobs;
+    height: 100%;
+    background: $cyan;
+    border-radius: 100%;
+    transform: translate3d(0,150%,0) scale(1.7);
+    transition: transform 0.45s;
+    
+    @supports(filter: url('#goo')) {
+      transform: translate3d(0,150%,0) scale(1.4);
+    }
+    
+    @for $i from 1 through $numOfBlobs {
+      &:nth-child(#{$i}) {
+        left: ($i - 1) * (120% / $numOfBlobs);
+        transition-delay: ($i - 1) * 0.08s;
+      }
+    }
+    
+    .blob-btn:hover & {
+      transform: translateZ(0) scale(1.7);
+      
+      @supports(filter: url('#goo')) {
+        transform: translateZ(0) scale(1.4);
+      }
+    }
+  }
+  
+}
+.bloppos{
+  position: relative;
+  right: 50px;
+}
+
+.form__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.form__input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+	margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+input {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+:-moz-placeholder {
+  text-align: center;
+}
+.container {
+  text-align: center;
+  margin: 80px auto;
+  width: 600px;
+  background: rgb(165, 107, 59);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(114, 92, 79, 0.4);
+  opacity: 0.8;
+}
+
+.foot{
+  position: relative;
+  left: 200px;
+
+}
+.res{
+  width: 500px;
+  
+}
